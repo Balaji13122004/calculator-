@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #211D1A;
+  color: #EDE7DD;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.header {
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #B08D57;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.header h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  color: #F7F3EA;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  font-size: 13.5px;
+  color: #9C9184;
+  margin-top: 6px;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7A6F62;
+  font-weight: 600;
+  margin: 22px 0 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2A2521;
+  border: 1px solid #3A332C;
+  border-radius: 12px;
+  padding: 12px 14px;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.lw-row {
+  margin-bottom: 0;
+}
+
+.row-info {
+  min-width: 0;
+}
+
+.row-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #F0EAE0;
+}
+
+.row-rate {
+  font-size: 12.5px;
+  color: #8C8175;
+  margin-top: 2px;
+}
+
+/* Quantity control (sinks) */
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.stepper {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #4A423A;
+  background: #211D1A;
+  color: #D9A05B;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.stepper:hover {
+  background: #2A2521;
+}
+
+.qty-control input {
+  width: 46px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: #F7F3EA;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.qty-control input::-webkit-outer-spin-button,
+.qty-control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Length x Width control (slab / nosing / beeding) */
+.lw-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.lw-field {
+  background: #211D1A;
+  border: 1px solid #3E362F;
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+.lw-field input {
+  width: 58px;
+  text-align: right;
+  background: transparent;
+  border: none;
+  color: #F7F3EA;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+}
+
+.lw-x {
+  color: #7A6F62;
+  font-size: 13px;
+}
+
+.sqft-preview {
+  font-size: 12px;
+  color: #8C8175;
+  text-align: right;
+  padding: 4px 14px 12px;
+  min-height: 18px;
+}
+
+.sqft-preview.filled {
+  color: #D9A05B;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.clear-btn {
+  background: none;
+  border: 1px solid #4A423A;
+  color: #B7ACA0;
+  font-size: 13.5px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #2A2521;
+}
+
+.submit-btn {
+  flex: 1;
+  background: #D9A05B;
+  border: none;
+  color: #211D1A;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #E5AF6F;
+}
+
+/* Result box */
+.result-box {
+  margin-top: 26px;
+  background: #2C2622;
+  border: 1px solid #3E362F;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.result-box.hidden {
+  display: none;
+}
+
+.result-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.result-line span:last-child {
+  color: #EDE7DD;
+  font-weight: 600;
+}
+
+.result-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #B7ACA0;
+}
+
+.result-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid #3E362F;
+  padding-top: 12px;
+}
+
+.result-total-row span:first-child {
+  font-size: 13px;
+  color: #9C9184;
+  font-weight: 500;
+}
+
+.result-total-row span:last-child {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #D9A05B;
+}
+
+.empty-note {
+  font-size: 13.5px;
+  color: #9C9184;
+  text-align: center;
+  padding: 6px 0;
+}
+
+/* Bill action buttons */
+.bill-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  border-top: 1px solid #3E362F;
+  padding-top: 16px;
+}
+
+.bill-action-btn {
+  flex: 1;
+  min-width: 130px;
+  background: #211D1A;
+  border: 1px solid #4A423A;
+  color: #EDE7DD;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 11px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.bill-action-btn:hover {
+  background: #2A2521;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  border-color: #25D366;
+  color: #0B1A10;
+}
+
+.whatsapp-btn:hover {
+  background: #2FE075;
+}
+
+/* Print-only styles: hide the form and buttons, show a clean bill */
+@media print {
+  .header .sub,
+  #calcForm,
+  .bill-actions {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  .result-box {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+  }
+
+  .result-line span:last-child,
+  .result-total-row span:last-child {
+    color: #111;
+  }
+
+  .eyebrow {
+    color: #B08D57;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Receipt | Rohith Kitchen & Stone Fabrications</title>
+<link rel="stylesheet" href="receipt.css" />
+</head>
+<body>
+
+  <div class="receipt-page">
+    <div class="receipt-card" id="receiptCard">
+
+      <div class="receipt-header">
+        <div class="company-name">Rohith Kitchen &amp; Stone Fabrications</div>
+        <div class="company-location">Mallanur, Andhra Pradesh</div>
+      </div>
+
+      <div class="receipt-divider"></div>
+
+      <div class="receipt-title-row">
+        <div class="receipt-title">Payment Receipt</div>
+      </div>
+
+      <div class="receipt-meta">
+        <div class="meta-item">
+          <span class="meta-label">Receipt No.</span>
+          <span class="meta-value" id="metaReceiptNo">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Date</span>
+          <span class="meta-value" id="metaDate">—</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Time</span>
+          <span class="meta-value" id="metaTime">—</span>
+        </div>
+      </div>
+
+      <div class="receipt-divider"></div>
+
+      <div id="itemsList" class="items-list">
+        <!-- items injected by receipt.js -->
+      </div>
+
+      <div class="receipt-divider"></div>
+
+      <div class="total-row">
+        <span>Total</span>
+        <span id="metaTotal">₹0</span>
+      </div>
+
+      <div class="receipt-footer">
+        <p>This is an estimate. Final price may vary based on site measurements.</p>
+        <p class="thank-you">Thank you for choosing us!</p>
+      </div>
+    </div>
+
+    <div id="noDataNote" class="no-data-note hidden">
+      No receipt data found. Please go back and click "Get Total" first, then "Download Receipt" again.
+    </div>
+
+    <div class="page-actions" id="pageActions">
+      <button type="button" id="downloadPdfBtn" class="page-action-btn">Download as PDF</button>
+      <button type="button" id="printReceiptBtn" class="page-action-btn">Print</button>
+      <button type="button" id="whatsappReceiptBtn" class="page-action-btn whatsapp-btn">Send on WhatsApp</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="receipt.js"></script>
+</body>
+</html>

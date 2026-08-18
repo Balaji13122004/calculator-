@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Business Work — Price Calculator | Rohith Kitchen & Stone Fabrications</title>
+<link rel="stylesheet" href="calculator.css" />
+</head>
+<body>
+
+  <div class="page">
+    <div class="header">
+      <div class="eyebrow">Rohith Kitchen &amp; Stone Fabrications</div>
+      <h1>Business Work</h1>
+      <p class="sub">Fill in only what you need. Leave the rest blank.</p>
+    </div>
+
+    <form id="calcForm">
+
+      <div class="section-label">Fittings</div>
+
+      <div class="row">
+        <div class="row-info">
+          <div class="row-name">Joint Sink</div>
+          <div class="row-rate">₹3,000 each</div>
+        </div>
+        <div class="qty-control">
+          <button type="button" class="stepper" data-step="-1" data-target="jointSink">−</button>
+          <input type="number" id="jointSink" name="jointSink" min="0" placeholder="0" />
+          <button type="button" class="stepper" data-step="1" data-target="jointSink">+</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-info">
+          <div class="row-name">Mold Sink</div>
+          <div class="row-rate">₹6,000 each</div>
+        </div>
+        <div class="qty-control">
+          <button type="button" class="stepper" data-step="-1" data-target="moldSink">−</button>
+          <input type="number" id="moldSink" name="moldSink" min="0" placeholder="0" />
+          <button type="button" class="stepper" data-step="1" data-target="moldSink">+</button>
+        </div>
+      </div>
+
+      <div class="section-label">Slab &amp; Finishing (sqft)</div>
+
+      <!-- Slab -->
+      <div class="row lw-row">
+        <div class="row-info">
+          <div class="row-name">Slab</div>
+          <div class="row-rate">₹180 / sqft</div>
+        </div>
+        <div class="lw-control">
+          <div class="lw-field">
+            <input type="number" id="slab_l" min="0" step="0.1" placeholder="L (ft)" />
+          </div>
+          <span class="lw-x">×</span>
+          <div class="lw-field">
+            <input type="number" id="slab_w" min="0" step="0.1" placeholder="W (ft)" />
+          </div>
+        </div>
+      </div>
+      <div class="sqft-preview" id="slab_preview"></div>
+
+      <!-- Nosing 30mm -->
+      <div class="row lw-row">
+        <div class="row-info">
+          <div class="row-name">Nosing — 30mm slab</div>
+          <div class="row-rate">₹80 / sqft</div>
+        </div>
+        <div class="lw-control">
+          <div class="lw-field">
+            <input type="number" id="nosing30_l" min="0" step="0.1" placeholder="L (ft)" />
+          </div>
+          <span class="lw-x">×</span>
+          <div class="lw-field">
+            <input type="number" id="nosing30_w" min="0" step="0.1" placeholder="W (ft)" />
+          </div>
+        </div>
+      </div>
+      <div class="sqft-preview" id="nosing30_preview"></div>
+
+      <!-- Nosing 20mm -->
+      <div class="row lw-row">
+        <div class="row-info">
+          <div class="row-name">Nosing — 20mm slab</div>
+          <div class="row-rate">₹40 / sqft</div>
+        </div>
+        <div class="lw-control">
+          <div class="lw-field">
+            <input type="number" id="nosing20_l" min="0" step="0.1" placeholder="L (ft)" />
+          </div>
+          <span class="lw-x">×</span>
+          <div class="lw-field">
+            <input type="number" id="nosing20_w" min="0" step="0.1" placeholder="W (ft)" />
+          </div>
+        </div>
+      </div>
+      <div class="sqft-preview" id="nosing20_preview"></div>
+
+      <!-- Beeding -->
+      <div class="row lw-row">
+        <div class="row-info">
+          <div class="row-name">Beeding</div>
+          <div class="row-rate">₹140 / sqft</div>
+        </div>
+        <div class="lw-control">
+          <div class="lw-field">
+            <input type="number" id="beeding_l" min="0" step="0.1" placeholder="L (ft)" />
+          </div>
+          <span class="lw-x">×</span>
+          <div class="lw-field">
+            <input type="number" id="beeding_w" min="0" step="0.1" placeholder="W (ft)" />
+          </div>
+        </div>
+      </div>
+      <div class="sqft-preview" id="beeding_preview"></div>
+
+      <div class="actions">
+        <button type="button" id="clearBtn" class="clear-btn">Clear all</button>
+        <button type="submit" id="submitBtn" class="submit-btn">Get Total</button>
+      </div>
+    </form>
+
+    <div id="resultBox" class="result-box hidden">
+      <div id="resultLines" class="result-lines"></div>
+      <div class="result-total-row">
+        <span>Total</span>
+        <span id="resultTotal">₹0</span>
+      </div>
+
+      <div class="bill-actions">
+        <button type="button" id="downloadBtn" class="bill-action-btn">Download Receipt (PDF)</button>
+        <button type="button" id="printBtn" class="bill-action-btn">Print</button>
+        <button type="button" id="whatsappBtn" class="bill-action-btn whatsapp-btn">Send on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- jsPDF library, used only for the Download Receipt button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="calculator.js"></script>
+  <script src="bill-actions.js"></script>
+</body>
+</html>

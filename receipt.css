@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #17140F;
+  color: #211D1A;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.receipt-page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 16px 60px;
+}
+
+.receipt-card {
+  background: #FBF8F2;
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.receipt-header {
+  text-align: center;
+}
+
+.company-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #211D1A;
+}
+
+.company-location {
+  font-size: 12.5px;
+  color: #8C8175;
+  margin-top: 4px;
+}
+
+.receipt-divider {
+  height: 1px;
+  background: #E2D9C8;
+  margin: 16px 0;
+}
+
+.receipt-title-row {
+  text-align: center;
+}
+
+.receipt-title {
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #B08D57;
+}
+
+.receipt-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  gap: 10px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9C9184;
+}
+
+.meta-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #211D1A;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #211D1A;
+}
+
+.item-detail {
+  font-size: 12px;
+  color: #8C8175;
+  margin-top: 2px;
+}
+
+.item-amount {
+  font-size: 14px;
+  font-weight: 700;
+  color: #211D1A;
+  white-space: nowrap;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.total-row span:first-child {
+  font-size: 13px;
+  color: #6E655A;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.total-row span:last-child {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #B0713A;
+}
+
+.receipt-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.receipt-footer p {
+  font-size: 11.5px;
+  color: #9C9184;
+  margin: 4px 0;
+}
+
+.thank-you {
+  font-style: italic;
+}
+
+.no-data-note {
+  background: #2C2622;
+  color: #EDE7DD;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.no-data-note.hidden {
+  display: none;
+}
+
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-action-btn {
+  flex: 1;
+  min-width: 130px;
+  background: #2A2521;
+  border: 1px solid #4A423A;
+  color: #EDE7DD;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.page-action-btn:hover {
+  background: #34302A;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  border-color: #25D366;
+  color: #0B1A10;
+}
+
+.whatsapp-btn:hover {
+  background: #2FE075;
+}
+
+/* Print: show only the receipt card, clean on white */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .page-actions,
+  .no-data-note {
+    display: none !important;
+  }
+
+  .receipt-page {
+    padding: 0;
+  }
+
+  .receipt-card {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
